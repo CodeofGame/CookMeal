@@ -1,0 +1,48 @@
+extends layout
+
+block content
+  nav.navbar.navbar-default.navbar-fixed-top.navbar-inverse(role="navigation")
+    div.container
+      div.navbar-header
+          button.navbar-toggle.collapsed(type="button",data-toggle="collapse",aria-expanded="false",data-target="#t1")
+            span.sr-only 中华小当家
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+           a.navbar-brand 中华小当家
+      div.navbar-collapse.collapse#t1
+          ul.nav.navbar-nav
+              li.active
+                a(href="#") 首页
+              li.dropdown
+                a.dropdown-toggle(data-toggle="dropdown",aria-expanded="false",href="#",aria-haspopup="true" ) 菜谱分类
+                    ul.dropdown-menu(role="menu")
+                        li.active
+                            a(href="#") 常用主题
+                        li
+                            a(href="#") 常见食材
+                        li
+                            a(href="#") 时令蔬菜
+
+              li
+                  a(href="#") 菜单
+              li
+                  a(href="#") 作品动态
+
+  div.carousel.slide#carousel-example-generic(data-ride="carousel")
+      ol.carousel-indicators
+          li.active(data-target="@carousel-example-generic",data-slide-to="1")
+          li(data-target="#carousel-example-generic",data-slide-to="2")
+      div.carousel-inner(role="listbox")
+        div.item.active
+            img(src="/images/红烧排骨.jpg",alt="红烧排骨")
+        div.item
+            img(src="/images/红烧排骨2.jpg",alt="红烧排骨")
+
+      a.left.carousel-control(htef="#carousel-example-generic",role="button",data-slide="prev")
+        span.glyphicon.glyphicon-chevron-left(aria-hidden="true")
+        span.sr-only Previous
+      a.right.carousel-control(htef="#carousel-example-generic",role="button",data-slide="next")
+          span.glyphicon.glyphicon-chevron-right(aria-hidden="true")
+          span.sr-only Next
+
